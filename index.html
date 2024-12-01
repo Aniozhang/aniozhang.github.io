@@ -1,82 +1,58 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Anio Zhang</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/about.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-                <h2 id="header">
-                    Anio Zhang
-				</h2>
-
-                <nav id="nav">
-                    <ul class="links">
-                        <li class="active"><a href="./index.html">Home</a></li>
-                        <li><a href="./projects.html">Projects</a></li> 
-                        <li><a href="./activities.html">Activities</a></li>  
-                    </ul>  
-                    <ul class="icons">
-                        <li><a href="javascript:void(0);" id="copy_email" onclick="copyToClipboard()" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
-                        <li><a href="https://www.github.com/aniozhang" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="https://www.linkedin.com/in/anio-zhang-190681286/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-                        <li><a class="icon fa-file-pdf" href="./assets/resume.pdf" download> Resume </a></li>
-                    </ul> 
-                </nav>
-
-                <div id="main">
-                    <section class="post">
-                        <article class="org-list">
-                            <header>
-                                <h2> About </h2>
-                            </header>
-                            <p> 
-                                <br>
-                                As a graduate student at Northeastern University, I am currently enrolled in the Master's degree program in Information Systems. My academic pursuits are primarily focused on research and development within the expansive domain of computer science and engineering.<br>
-
-Driven by a profound interest in advancing technology, my current research initiatives center around projects involving machine learning and robotics. Specifically, I am engaged in the exploration of methodologies that integrate machine learning principles with robotics applications.<br>
-
-Within this realm, my work involves the development of robotic systems capable of autonomous learning from their environment. Leveraging advanced techniques such as reinforcement learning and genetic algorithms, I endeavor to construct robots endowed with adaptive capabilities, paving the way for enhanced functionality and performance.<br>
-
-This endeavor represents a fusion of theoretical knowledge and practical implementation, aimed at pushing the boundaries of innovation within the fields of machine learning and robotics. Through rigorous experimentation and analysis, I seek to contribute novel insights and solutions that address real-world challenges and drive technological advancement.<br>
-
-I am committed to the pursuit of excellence in research and development, and I am enthusiastic about the opportunity to collaborate with like-minded individuals and organizations in furthering the frontiers of science and technology.<br>
-                                <br>
-                            </p>
-                        </article>
-                    </section>
-
-
-                    <div class="org-list">
-                        <div class="org-element">
-                            <img class="org-img" src="./images/neu.png">
-                            <h5>Northeastern University</h5>
-                            <div>2023 - Present</div>
-                        </div>
-
-                        <div class="org-element">
-                            <img class="org-img" src="./images/snu.png">
-                            <h5>Shangai Normal University</h5>
-                            <div>2019 - 2021</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .profile-pic {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <img src="./assets/selfie1.jpeg" alt="Profile Picture" class="profile-pic">
+    <nav>
+        <a href="./index.html">About</a>
+        <a href="./tidbits.html">Tidbits</a>
+        <a href="./publication.html">Publications</a>
+        <a href="./blog.html">Blog</a>
+    </nav>
+    <section id="about">
+        <h1>About</h1>
+        <p>
+            Hey, there! My name is Shengnan Zhang, preferred name is Anio Parker. I am a Master's Student at Northeastern University. 
+            <br>
+            My current research focus includes robot manipulation and human-robot interaction.
+            <br>
+            
+        </p>
+    </section>
+</body>
 </html>
