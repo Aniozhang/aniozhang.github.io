@@ -2,5 +2,5 @@
 
 
 👋 Hi, I’m Anio Zhang.
-🪴 Manipulation & Grasping of Robot Arm|Computer Vision|Artificial Intelligence
+🪴 Manipulation and Perception|Computer Vision|Artificial Intelligence
 📫 Feel free to contact me via: zhang.shengn@northeastern.edu
