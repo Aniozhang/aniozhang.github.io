@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anio Parker</title>
+    <style>
+        body {
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar a {
+            display: block;
+            color: yellow;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .section {
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content */
+            text-align: center;
+            width: 100%;
+        }
+
+        .image-container {
+            display: flex;
+            gap: 20px; /* Adjust the gap between images */
+            justify-content: center;
+            margin-bottom: 20px; /* Adds space before text starts */
+        }
+
+        .image-container img {
+            max-width: 300px; /* Maintain aspect ratio */
+            height: auto;
+            object-fit: cover;
+        }
+
+        .black-header {
+            color: black;
+            text-align: center;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 1000px;
+        }
+        .projects-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .project-carousel {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .carousel-container {
+            width: 400px; /* Set a fixed width for images */
+            height: 250px; /* Set a fixed height for images */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+        }
+
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the aspect ratio is maintained */
+        }
+
+        .prev-btn, .next-btn {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .prev-btn:hover, .next-btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .project-info {
+            margin-top: 15px;
+        }
+
+        .project h2 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .project-links a {
+            text-decoration: none;
+            color: cyan;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project-links a:hover {
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2 style="color:white">Anio Parker</h2>
+            <a href="./index.html"> HOME </a>
+            <a href="./interests.html">INTERESTS</a>
+            <a href="./technical.html">TECHNICAL SCIENCE</a>
+
+            <a class="icon fa-file-pdf" href="./assets/resume.pdf" download> CV </a>
+            <div class="contact">
+                <p>Graduate, Shengnan(Anio) Zhang(Parker)<br>College of Engineering, NEU<br>Boston, MA, USA</p>
+                <p>(857) 423-MASK<br><a href="zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1 class="black-header">Projects</h1>
+            <ul class="projects-list">
+                <!-- Project 1 -->
+                <li class="project">
+                    <div class="project-carousel">
+                        <div class="carousel-container">
+                            <img src="./asset/vlm_temp.png" alt="Project 1 Image 1" class="carousel-img" id="project1-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>VLM based robot manipulator</h2>
+                        <p>This is my master project. In this project I explore the utility of VLMs in generating novel policies for robot arms to grasp and manipulate objects.</p>
+                        <div class="project-links">
+                            <!-- <a href="https://github.com/yourproject" target="_blank">GitHub</a>
+                            <a href="https://arxiv.org/yourpaper" target="_blank">Paper</a> -->
+                        </div>
+                    </div>
+                </li>
+        
+                <!-- Project 2 -->
+                <li class="project">
+                    <div class="project-carousel">
+                        <div class="carousel-container">
+                            <img src="./asset/tilingProblem.png" alt="Project 2 Image 1" class="carousel-img" id="project2-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>Shapeshifting Coloring Problem</h2>
+                        <p>
+                            Developed for Northeastern University's Foundations of AI course and published at EAAI-2025, this interactive assignment presents a variant of the tiling problem with multiple constraints. 
+                            Students explore diverse approaches to solve this <b>constraint satisfaction problem (CSP)</b>, aiming for optimal solutions.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Aniozhang/EAAI-Tiling_Puzzle" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="project">
+                    <div class="project-carousel">
+                        <div class="carousel-container">
+                            <img src="./asset/KANposter.png" alt="Project 2 Image 1" class="carousel-img" id="project2-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>KAN-Based Inverse Kinematics</h2>
+                        <p>
+                            This research leverages <b>Kolmogorov-Arnold Networks (KANs)</b> to improve <b>inverse kinematics (IK)</b> computation on resource-constrained microcontrollers. 
+                            KANs generate compact mathematical formulations that map <b>end-effector positions (quaternions) to joint angles</b> for robotic arms with up to **20 degrees of freedom (DoFs)**. 
+                            Our results demonstrate KANs' superiority over <b>MLPs and genetic algorithms</b>, offering computational efficiency and better generalization for real-time IK applications.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Aniozhang/IK_KAN" target="_blank">GitHub</a>
+                            <a href="https://github.com/Aniozhang/IK_KAN/blob/main/NERC_Poster.jpeg" target="_blank">Paper</a>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                <li class="project">
+                    <div class="project-carousel">
+                        <div class="carousel-container">
+                            <img src="./asset/waltz.jpeg" alt="Project 2 Image 1" class="carousel-img" id="project2-img">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h2>WaltZ</h2>
+                        <p>
+                            WaltZ, a 6-DoF bipedal robot, is a flagship initiative of the Khoury Robotics Club. Powered by an RP2040 microcontroller and a 9-axis IMU, it is designed for affordability and ease of fabrication. This ongoing project aims to serve as an educational platform, demonstrating gait dynamics, balance control, and embedded system principles in robotics curricula.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Khoury-Robotics-Club/WaltZ" target="_blank">GitHub</a>
+                            <!-- <a href="https://github.com/Aniozhang/IK_KAN/blob/main/NERC_Poster.jpeg" target="_blank">Paper</a> -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Store project images
+        const projectImages = [
+            ["./assets/project1_img1.jpg", "./assets/project1_img2.jpg", "./assets/project1_img3.jpg"],
+            ["./assets/project2_img1.jpg", "./assets/project2_img2.jpg", "./assets/project2_img3.jpg"]
+        ];
+        
+        let projectIndices = [0, 0]; // Track the current image index for each project
+    
+        function nextImage(projectIndex) {
+            projectIndices[projectIndex] = (projectIndices[projectIndex] + 1) % projectImages[projectIndex].length;
+            document.getElementById(`project${projectIndex + 1}-img`).src = projectImages[projectIndex][projectIndices[projectIndex]];
+        }
+    
+        function prevImage(projectIndex) {
+            projectIndices[projectIndex] = (projectIndices[projectIndex] - 1 + projectImages[projectIndex].length) % projectImages[projectIndex].length;
+            document.getElementById(`project${projectIndex + 1}-img`).src = projectImages[projectIndex][projectIndices[projectIndex]];
+        }
+    </script>
+</body>
+</html>

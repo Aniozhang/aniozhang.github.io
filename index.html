@@ -3,75 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Anio Parker</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-            background-color: white;
-            color: black;
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
             font-family: Arial, sans-serif;
-            cursor: url('./assets/cursor.png'), auto;
+            color: white;
+            margin: 0;
         }
-        nav {
-            padding: 20px;
+        .container {
             display: flex;
-            gap: 20px;
         }
-        a {
+        .sidebar {
+            width: 250px;
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar a {
+            display: block;
+            color: yellow;
             text-decoration: none;
-            color: black;
+            font-size: 16px;
+            margin-bottom: 10px;
         }
-        a:hover {
-            text-decoration: underline;
+        .content {
+            flex: 1;
+            padding: 10px;
         }
-        .profile-pic {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+        .header {
+            display: flex;
+            align-items: left;
+            gap: 15px;
+        }
+        .header img {
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ccc;
+            border: 2px solid white;
         }
-        main {
-            flex: 1;
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            border-radius: 20px; /* Removes rounded corners */
+            margin-top: 20px;
+            width: calc(100% - 100px); /* Full width minus sidebar */
+            margin-left: auto; /* Ensures it stays aligned next to the sidebar */
         }
-        footer {
-            margin-top: auto;
-            padding: 10px 20px;
-            background-color: #f8f8f8;
+
+        .section p {
+            flex: 1; /* Makes text take available space */
+            font-size: larger;
+            text-align: left;
+        }
+        .contact {
+            margin-top: 20px;
             font-size: 14px;
-            position: relative;
-            bottom: 2%;
+        }
+        .main-content {
+            position: relative; /* Needed for absolute positioning of pseudo-element */
+            width: 100%;
+            overflow: hidden; /* Ensures content stays within bounds */
+        }
+
+        .main-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./asset/background.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5; /* Set opacity to 25% */
+            z-index: -1; /* Ensures it stays behind the content */
+        }
+
+        .image-container {
+            flex-shrink: 0; /* Prevents image from shrinking */
+            width: 40%; /* Controls image size relative to the section */
+            max-width: 300px; /* Limits max image width */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px; /* Optional: Adds rounded corners */
+        }
+
+        .black-header {
+            color: black;
+            text-align: left;
+            display: block;
+            width: calc(100% - 70px); /* Full width minus the sidebar */
+            margin-left: auto; /* Ensures it aligns properly */
+            padding: 10px 0; /* Adds some spacing */
+        }
+
+
+        .content {
+            width: 90%;
+            max-width: 1000px;
         }
     </style>
 </head>
 <body>
-    <img src="./assets/selfie1.jpeg" alt="Profile Picture" class="profile-pic">
-    <nav>
-        <a href="./index.html">About</a>
-        <a href="./tidbits.html">Tidbits</a>
-        <a href="./publication.html">Publications</a>
-        <a href="./blog.html">Blog</a>
-    </nav>
-    <main>
-        <section id="about">
-            <h1>About</h1>
-            <p>
-                Hey, there! My name is Shengnan Zhang, preferred name is Anio Parker. I am a Master's Student at Northeastern University. 
-                <br>
-                Research fields: robot manipulation and human-robot interaction.
-                <br>
-                Interdisciplinary enthusiast: Mathematics, Computer Science, Group Thoery, Physics, Quantumn Mechanics, Biology, Cosmology, Aerodynamics, Thermodynamics.
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>Music | Sports | Robots | Nature | French |</p>
-    </footer>
+    <div class="container">
+        <div class="sidebar">
+            <h2 style="color:white">Anio Parker</h2>
+            <a href="./projects.html">PROJECTS</a>
+            <a href="./interests.html">INTERESTS</a>
+            <a href="./technical.html">TECHNICAL SCIENCE</a>
+            <a href="./Goofs.html">TECHNICAL SCIENCE</a>
+
+            <a class="icon fa-file-pdf" href="./assets/resume.pdf" download> CV </a>
+            <!--
+            <a href="#">POPULAR SCIENCE</a>
+            <a href="#">TECHNICAL SCIENCE</a>
+            <a href="#">CRAZY SCIENCE</a>
+            -->
+
+
+
+            <div class="contact">
+                <p>Graduate, Shengnan(Anio) Zhang(Parker)<br>College of Engineering, NEU<br>Boston, MA, USA</p>
+                <p>(857) 423-MASK<br><a href="zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content">
+                <div class="header">
+                    <h1 class="black-header">Shengnan(Anio) Zhang(Parker)</h1>
+                </div>
+                <div class="section">
+                    <p>
+                        I am a Graduate Student at Helping Hands Lab, Northeastern University (NEU), with Prof. Robert Platt.
+                        <br>
+                        <br>
+                        I research robot manipulation and perception, optimizing reinforcement learning and machine learning models through efficient algorithms and data compression. My journey in research and science began at Northeastern University.
+                    </p>
+                    
+                    <div class="image-container">
+                        <img src="./asset/image_1.jpg" alt="Image 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

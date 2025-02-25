@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anio Parker</title>
+    <style>
+        body {
+            background: url('') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar a {
+            display: block;
+            color: yellow;
+            text-decoration: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: left;
+            gap: 15px;
+        }
+        .header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .section {
+            background: rgba(19, 8, 83, 0.836);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: left; /* left content */
+            text-align: left;
+            width: 100%;
+        }
+
+        .image-container {
+            display: flex;
+            gap: 20px; /* Adjust the gap between images */
+            justify-content: center;
+            margin-bottom: 20px; /* Adds space before text starts */
+        }
+
+        .image-container img {
+            max-width: 300px; /* Maintain aspect ratio */
+            height: auto;
+            object-fit: cover;
+        }
+
+        .black-header {
+            color: black;
+            text-align: left;
+        }
+
+        .content {
+            width: 90%;
+            max-width: 1000px;
+        }
+        .interest-section {
+            background: white;
+            color: black;
+            padding: 10px; /* Minimal padding to prevent text from touching edges */
+            border-radius: 0px;
+            width: 95%; /* Ensures it spans the full width */
+            text-align: left;
+        }
+
+        .interest-section h2, 
+        .interest-section p {
+            text-align: left;
+            margin: 0; /* Removes any extra spacing */
+            padding: 0; /* Ensures no extra padding */
+        }
+
+        .image-list {
+            display: flex;
+            flex-direction: column; /* Stacks images vertically */
+            align-items: left; /* left everything */
+            gap: 30px; /* Adds space between images */
+            width: 100%;
+        }
+
+        .image-item {
+            text-align: left;
+            width: 80%; /* Makes images large but responsive */
+            max-width: 600px; /* Limits max width for large screens */
+        }
+
+        .image-item img {
+            width: 100%; /* Makes the image fill the container */
+            height: auto;
+            border-radius: 10px; /* Optional: Adds rounded corners */
+        }
+
+        .image-item p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2 style="color:white">Anio Parker</h2>
+            <a href="./index.html"> HOME </a>
+            <a href="./projects.html">PROJECTS</a>
+            <a href="./interests.html">INTERESTS</a>
+
+            <a class="icon fa-file-pdf" href="./assets/resume.pdf" download> CV </a>
+            <div class="contact">
+                <p>Graduate, Shengnan(Anio) Zhang(Parker)<br>College of Engineering, NEU<br>Boston, MA, USA</p>
+                <p>(857) 423-MASK<br><a href="zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
+            </div>
+        </div>
+            <div class="main-content">
+                <!-- <div class="interest-section">
+                    <h2>Technical Interest</h2>
+                    <p>fkjasdnckjs dnvkjdfbnv kjdfnbkjbldnf kjedfn</p>
+                </div> -->
+            
+                <div class="interest-section">
+                    <h2></h2>
+                    
+                    <div class="image-list">
+                        <div class="image-item">
+                            <img src="./asset/DSC_0362.jpeg" alt="Interest 1">
+                            <br>
+                            That one time I decided to hike a volcanic mountain in Iceland... and almost got lost. Fire and ice, what a combo!
+                        </div>
+                        <div class="image-item">
+                            <img src="./asset/DSC_0375.jpeg" alt="Interest 2">
+                            <br>
+                            Hiking again, but this time in a much safer (and less dramatic) location. Lesson learned... kind of.
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="interest-section">
+                    <h2>Side Interest</h2>
+                    
+                    <div class="image-list">
+                        <div class="image-item">
+                            <img src="./asset/DSC_0362.jpeg" alt="Interest 1">
+                            <br>
+                            That one time I decided to hike a volcanic mountain in Iceland... and almost got lost. Fire and ice, what a combo!
+                        </div>
+                        <div class="image-item">
+                            <img src="./asset/DSC_0375.jpeg" alt="Interest 2">
+                            <br>
+                            Hiking again, but this time in a much safer (and less dramatic) location. Lesson learned... kind of.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
