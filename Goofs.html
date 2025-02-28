@@ -61,6 +61,19 @@
             width: 100%;
         }
 
+        .main-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./asset/background.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5; /* Set opacity to 25% */
+            z-index: -1; /* Ensures it stays behind the content */
+        }
+
         .image-container {
             display: flex;
             gap: 20px; /* Adjust the gap between images */
@@ -134,7 +147,9 @@
             <h2 style="color:white">Anio Parker</h2>
             <a href="./index.html"> HOME </a>
             <a href="./projects.html">PROJECTS</a>
-            <a href="./technical.html">TECHNICAL SCIENCE</a>
+            <a href="./interests.html">INTERESTS</a>
+            <!-- <a href="./technical.html">TECHNICAL SCIENCE</a> -->
+            <a href="./Goofs.html">TECHNICAL SCIENCE</a>
 
             <a class="icon fa-file-pdf" href="./assets/resume.pdf" download> CV </a>
             <div class="contact">

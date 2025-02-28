@@ -43,89 +43,83 @@
             border-radius: 50%;
             border: 2px solid white;
         }
-        .section {
-            background: rgba(19, 8, 83, 0.836);
+        .main-content {
+            background: #4B0082; /* Fully purple background */
             padding: 20px;
             border-radius: 10px;
-            margin-top: 20px;
-        }
-        .contact {
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: left; /* left content */
-            text-align: left;
-            width: 100%;
-        }
-
-        .image-container {
-            display: flex;
-            gap: 20px; /* Adjust the gap between images */
-            justify-content: center;
-            margin-bottom: 20px; /* Adds space before text starts */
-        }
-
-        .image-container img {
-            max-width: 300px; /* Maintain aspect ratio */
-            height: auto;
-            object-fit: cover;
-        }
-
-        .black-header {
-            color: black;
-            text-align: left;
-        }
-
-        .content {
             width: 90%;
             max-width: 1000px;
+            color: white; /* Ensures all text is white */
+            margin-left: 30px;
         }
+
+        .main-content * {
+            color: white; /* Ensures all nested elements have white text */
+        }
+
         .interest-section {
-            background: white;
-            color: black;
-            padding: 10px; /* Minimal padding to prevent text from touching edges */
-            border-radius: 0px;
-            width: 95%; /* Ensures it spans the full width */
+            background: #4B0082; /* Matches the main content background */
+            color: white; /* Ensures text remains white */
+            padding: 10px;
+            border-radius: 10px;
+            width: 95%;
             text-align: left;
         }
 
+        .main-content::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./asset/background.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5; /* Set opacity to 25% */
+            z-index: -1; /* Ensures it stays behind the content */
+        }
+
+        /* .interest-section {
+            background: white;
+            color: black;
+            padding: 10px;
+            border-radius: 0px;
+            width: 95%;
+            text-align: left;
+        } */
         .interest-section h2, 
         .interest-section p {
             text-align: left;
-            margin: 0; /* Removes any extra spacing */
-            padding: 0; /* Ensures no extra padding */
+            margin: 0;
+            padding: 0;
         }
-
         .image-list {
             display: flex;
-            flex-direction: column; /* Stacks images vertically */
-            align-items: left; /* left everything */
-            gap: 30px; /* Adds space between images */
+            flex-direction: column;
+            align-items: left;
+            gap: 30px;
             width: 100%;
         }
-
         .image-item {
             text-align: left;
-            width: 80%; /* Makes images large but responsive */
-            max-width: 600px; /* Limits max width for large screens */
+            width: 80%;
+            max-width: 600px;
         }
-
         .image-item img {
-            width: 100%; /* Makes the image fill the container */
+            width: 100%;
             height: auto;
-            border-radius: 10px; /* Optional: Adds rounded corners */
+            border-radius: 10px;
         }
-
         .image-item p {
             margin-top: 10px;
             font-size: 18px;
             color: rgb(0, 0, 0);
             font-weight: bold;
         }
-
+        .interest-section a {
+            color: blue;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -134,54 +128,164 @@
             <h2 style="color:white">Anio Parker</h2>
             <a href="./index.html"> HOME </a>
             <a href="./projects.html">PROJECTS</a>
-            <a href="./technical.html">TECHNICAL SCIENCE</a>
+            <a href="./interests.html">INTERESTS</a>
+            <!-- <a href="./technical.html">TECHNICAL SCIENCE</a> -->
+            <a href="./Goofs.html">TECHNICAL SCIENCE</a>
 
             <a class="icon fa-file-pdf" href="./assets/resume.pdf" download> CV </a>
             <div class="contact">
                 <p>Graduate, Shengnan(Anio) Zhang(Parker)<br>College of Engineering, NEU<br>Boston, MA, USA</p>
-                <p>(857) 423-MASK<br><a href="zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
+                <p>(857) 423-MASK<br><a href="mailto:zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
             </div>
         </div>
         <div class="main-content">
-            <!-- <div class="interest-section">
-                <h2>Technical Interest</h2>
-                <p>fkjasdnckjs dnvkjdfbnv kjdfnbkjbldnf kjedfn</p>
-            </div> -->
-        
             <div class="interest-section">
                 <h2>Domain Interest</h2>
-                
-                <div class="image-list">
-                    <div class="image-item">
-                        <img src="./asset/DSC_0362.jpeg" alt="Interest 1">
-                        <br>
-                        That one time I decided to hike a volcanic mountain in Iceland... and almost got lost. Fire and ice, what a combo!
-                    </div>
-                    <div class="image-item">
-                        <img src="./asset/DSC_0375.jpeg" alt="Interest 2">
-                        <br>
-                        Hiking again, but this time in a much safer (and less dramatic) location. Lesson learned... kind of.
+                <p>
+                    First and foremost, I feel grateful as a graduate student to join the Helping Hands Lab at Northeastern University and have Dr. Robert Platt as my supervisor, working with a group of talented PhD students in his lab.
+                    <br>
+                    Out of curiosity, I wish to build a 6-axis end-to-end robot arm, which includes mechanics, electrics, (Hm….however….due to resource limitations, I will explain this fun project based on what I know, please DO correct me if I do not explain well, criticisms accepted. :) 
+                    <br>
+                    AR4-MK3 | 600 mm reach | 2 kilograms of payload capacity | RC servo-driven arms | 3D print parts |  
+                    <br>
+                    (coming soon…) 
+                </p>
+
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/undefined.jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
                     </div>
                 </div>
+
+
             </div>
 
             <div class="interest-section">
                 <h2>Side Interest</h2>
-                
-                <div class="image-list">
-                    <div class="image-item">
-                        <img src="./asset/DSC_0362.jpeg" alt="Documentary/Magazines">
-                        <br>
-                        That one time I decided to hike a volcanic mountain in Iceland... and almost got lost. Fire and ice, what a combo!
+                <p>
+                    Actually, since I was a high school student, I have found that math and physics can kinda intuitively disclose the ultimate truth and nature of this universe (behind the complexity of reality, it allows us to discover hidden regularities; behind the agitation of objects and trajectories, it displays the Earth’s unchanging gravitation), perhaps this is the reason why until today, I still believe these are the things that bring meaning to my life, personally. 
+                </p>
+
+                <h3>The Land of Mathématiques</h3>
+
+                <p>
+                    Alright, sounds boring and probably all you can think of is a bunch of exotic numbers, weird notations and puzzles…However, from my point of view, math can be easily understood and it is just in our daily life(If you take a close look at it). Before we actually take a whirlwind tour and see the magnificent landscape here, I want to ask you some questions.(NO WORRIES, we are not going to do the math!) Alright, sounds boring and probably all you can think of is a bunch of exotic numbers, weird notations and puzzles…However, from my point of view, math can be easily understood and it is just in our daily life(If you take a close look at it). Before we actually take a whirlwind tour and see the magnificent landscape here, I want to ask you some questions.(NO WORRIES, we are not going to do the math!) 
+                </p>
+
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/undefined (1).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
                     </div>
-                    <div class="image-item">
-                        <img src="./asset/DSC_0375.jpeg" alt="Interest 2">
-                        <br>
-                        Hiking again, but this time in a much safer (and less dramatic) location. Lesson learned... kind of.
+                </div>
+
+                <ul>
+                    <li>
+                        Why do supermarkets seem to prefer small figures? What about the population of large cities and turnover of the stock market companies, the distance between stars in our galaxy? 
+                        (<a href="https://en.wikipedia.org/wiki/Simon_Newcomb#Benford's_law">Simon Newcomb, Benford’s Law, 1881</a>)
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (2).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Does a flying arrow really move? 
+                        (<a href="https://en.wikipedia.org/wiki/Infinitesimal">Isaac Newton, Infinitesimal calculus, 1660s</a>)
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (3).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Can all the manifolds be created from each other by deformation? 
+                        (<a href="https://en.wikipedia.org/wiki/Poincar%C3%A9_conjecture">The Poincaré conjecture, Henri Poincaré, 1904</a>)
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (4).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Do you think consciousness is expressed and displayed in a mathematical pattern? <em>(Coming soon…)</em>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="interest-section">
+                <h2>Ah! Physics</h2>
+            
+                <h3>One of My Favourite Fundamental Equations</h3>
+                <p>
+                    One of my favourite fundamental equations in physics is <strong>E = mc²</strong>, it basically says the exchange rate between energy and mass.
+                </p>
+                <p><em>(Coming soon…)</em></p>
+            
+                <h2>The Beauty of Cosmology</h2>
+                
+                <p>
+                    It was not until I accidentally came across Dr. Max Tegmark while whimsically surfing the internet on concepts like singularity, Big Bang, dark matter, cosmic microwave background, etc., that I realized there is still so much left for humans to explore in this vast universe. For example, going back to the very beginning of everything that describes how the universe evolved.  
+                </p>
+            
+                <h3>Interesting Questions in Cosmology</h3>
+                <ul>
+                    <li>
+                        Do you know the distant galaxies are actually moving away from us, and the farthest galaxies are moving away faster than the closer ones? Logically, does this mean all the galaxies started from one tiny central point? 
+                        (<a href="https://es.wikipedia.org/wiki/Edwin_Hubble">Edwin Hubble, 1929</a>)
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (5).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Why did the new radio telescope make constant annoying hits in the 1960s? Was this device hacked by the aliens?
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (6).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Can we calculate the age of the universe via the 1% static on your untuned TV? If we put together what we know about how fast it expands today and how fast this stuff falls apart, what actually exists in the universe, and Einstein's Equations of General Relativity, can we rewind the history of our universe backwards?
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (7).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        If matter and energy only account for about 5% of the universe's total mass, what about the remaining 95%?
+                        <div class="project-carousel">
+                            <div class="carousel-container">
+                                <img src="./asset/undefined (8).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        After 3 billion years, what will happen to the sun? (Guess where his coat goes… LMAO)
+                    </li>
+                </ul>
+            
+                <p><em>(Coming soon…)</em></p>
+            </div>
+            
+
+            <div class="interest-section">
+                <h2>Personal Interest</h2>
+                <p>
+                    Reading a piece of news in <i>Scientific American</i> (SCIAM) or browsing the <i>Nature</i> website in the morning will always refresh my mind. I got to know the latest news in robotics, space, genetics, neuroscience, epidemiology, etc. It is a great way to warm up a new day.  
+                    <br>
+                    It has been six months since hiking became one of my favorite sports activities. Joining a hiking group and casually chatting with friends, enjoying the oxygen in the forest brings me joy, peace, and calm. 
+                    <br>
+                    All work and no play makes Jack a dull boy. Random painting and beach walks make my day. 
+                </p>
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/undefined (9).jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
