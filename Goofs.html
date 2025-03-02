@@ -10,6 +10,8 @@
             background-size: cover;
             font-family: Arial, sans-serif;
             color: white;
+            background: url('./asset/background.png') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
         }
         .container {
@@ -43,22 +45,27 @@
             border-radius: 50%;
             border: 2px solid white;
         }
-        .section {
-            background: rgba(19, 8, 83, 0.836);
+        .main-content {
+            background: #4B0082; /* Fully purple background */
             padding: 20px;
             border-radius: 10px;
-            margin-top: 20px;
+            width: 90%;
+            max-width: 1000px;
+            color: white; /* Ensures all text is white */
+            margin-left: 30px;
         }
-        .contact {
-            margin-top: 20px;
-            font-size: 14px;
+
+        .main-content * {
+            color: white; /* Ensures all nested elements have white text */
         }
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: left; /* left content */
+
+        .interest-section {
+            background: #4B0082; /* Matches the main content background */
+            color: white; /* Ensures text remains white */
+            padding: 10px;
+            border-radius: 10px;
+            width: 95%;
             text-align: left;
-            width: 100%;
         }
 
         .main-content::before {
@@ -74,71 +81,47 @@
             z-index: -1; /* Ensures it stays behind the content */
         }
 
-        .image-container {
-            display: flex;
-            gap: 20px; /* Adjust the gap between images */
-            justify-content: center;
-            margin-bottom: 20px; /* Adds space before text starts */
-        }
-
-        .image-container img {
-            max-width: 300px; /* Maintain aspect ratio */
-            height: auto;
-            object-fit: cover;
-        }
-
-        .black-header {
-            color: black;
-            text-align: left;
-        }
-
-        .content {
-            width: 90%;
-            max-width: 1000px;
-        }
-        .interest-section {
+        /* .interest-section {
             background: white;
             color: black;
-            padding: 10px; /* Minimal padding to prevent text from touching edges */
+            padding: 10px;
             border-radius: 0px;
-            width: 95%; /* Ensures it spans the full width */
+            width: 95%;
             text-align: left;
-        }
-
+        } */
         .interest-section h2, 
         .interest-section p {
             text-align: left;
-            margin: 0; /* Removes any extra spacing */
-            padding: 0; /* Ensures no extra padding */
+            margin: 0;
+            padding: 0;
         }
-
         .image-list {
             display: flex;
-            flex-direction: column; /* Stacks images vertically */
-            align-items: left; /* left everything */
-            gap: 30px; /* Adds space between images */
+            flex-direction: column;
+            align-items: left;
+            gap: 30px;
             width: 100%;
         }
-
         .image-item {
             text-align: left;
-            width: 80%; /* Makes images large but responsive */
-            max-width: 600px; /* Limits max width for large screens */
+            width: 80%;
+            max-width: 600px;
         }
-
         .image-item img {
-            width: 100%; /* Makes the image fill the container */
+            width: 100%;
             height: auto;
-            border-radius: 10px; /* Optional: Adds rounded corners */
+            border-radius: 10px;
         }
-
         .image-item p {
             margin-top: 10px;
             font-size: 18px;
             color: rgb(0, 0, 0);
             font-weight: bold;
         }
-
+        .interest-section a {
+            color: blue;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -154,49 +137,162 @@
             <a class="icon fa-file-pdf" href="./assets/resume.pdf" download> CV </a>
             <div class="contact">
                 <p>Graduate, Shengnan(Anio) Zhang(Parker)<br>College of Engineering, NEU<br>Boston, MA, USA</p>
-                <p>(857) 423-MASK<br><a href="zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
+                <p>(857) 423-MASK<br><a href="mailto:zhang.shengn@northeastern.edu" style="color:yellow">zhang.shengn@northeastern.edu</a></p>
             </div>
         </div>
         <div class="main-content">
-            <!-- <div class="interest-section">
-                <h2>Technical Interest</h2>
-                <p>fkjasdnckjs dnvkjdfbnv kjdfnbkjbldnf kjedfn</p>
-            </div> -->
-        
             <div class="interest-section">
-                <h2>Domain Interest</h2>
-                
-                <div class="image-list">
-                    <div class="image-item">
-                        <img src="./asset/DSC_0362.jpeg" alt="Interest 1">
-                        <br>
-                        That one time I decided to hike a volcanic mountain in Iceland... and almost got lost. Fire and ice, what a combo!
-                    </div>
-                    <div class="image-item">
-                        <img src="./asset/DSC_0375.jpeg" alt="Interest 2">
-                        <br>
-                        Hiking again, but this time in a much safer (and less dramatic) location. Lesson learned... kind of.
+                <h2>Attention in Transformers: concepts and code in PyTorch.</h2>
+
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/trasnformer_1.jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
                     </div>
                 </div>
-            </div>
 
-            <div class="interest-section">
-                <h2>Side Interest</h2>
+                <h3> The main idea behind Transformers and Attentions  </h3>
+                <p>
+                    Transformers requires 3 main parts fundamentally: Word Embedding, Positional Encoding, and Attention, context aware embeddings. 
+                </p>
+
+                <ul>
+                    <li>
+                        <p> Word Embedding converts words, bits of words and symbols, collectively called tokens, into numbers. (We need this because Transformers are a type of Neural Networks that only have numbers for input values.) </p>
+                    </li>
+                    <li>
+                       <p> Positional Encoding helps keep track of word order. </p>
+                    </li>
+                    <li>
+                        <p> Attention — self-attention(works by seeing how similar each word is to all of the words in the sentences, including itself) </p>
+                    </li>
+                    <li>
+                        <p> Context aware embeddings can help cluster similar sentences and document </p>
+                    </li>
+                </ul>
+
+                <h3> The Matrix Math for calculating self-attention  </h3>
                 
-                <div class="image-list">
-                    <div class="image-item">
-                        <img src="./asset/DSC_0362.jpeg" alt="Interest 1">
-                        <br>
-                        That one time I decided to hike a volcanic mountain in Iceland... and almost got lost. Fire and ice, what a combo!
-                    </div>
-                    <div class="image-item">
-                        <img src="./asset/DSC_0375.jpeg" alt="Interest 2">
-                        <br>
-                        Hiking again, but this time in a much safer (and less dramatic) location. Lesson learned... kind of.
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/trasnformer_2.png" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
                     </div>
                 </div>
-            </div>
 
+                <p>
+                    It is more common to use 512 or more numbers to represent each word.<br><br>
+                
+                    Encoded values * Query weights(T) = Q<br>
+                    Encoded values * Key Weights(T) = K<br>
+                    Encoded values * Value Weights(T) = V<br><br>
+                
+                    Dot products can be used as an unscaled measure of similarity between two things, and this metric is closely related to something called the Cosine Similarity. The big difference is that the Cosine Similarity scales the Dot Product to be between -1 to 1.<br><br>
+                
+                    Square root of dk is the dimension of the Key matrix.<br><br>
+                
+                    The percentages that come out of the softmax function tell us how much influence each word should have on the final encoding for any given word.
+                </p>
+                
+                <h3> Coding self-attention in PyTorch </h3>
+
+                <p>
+                    Import torch: Tensors are multidimensional lists optimized for neural networks.<br><br>
+                
+                    <code>import torch</code>: for tensor operations.<br>
+                    <code>import torch.nn</code>: for the <code>Module</code> and <code>Linear</code> classes, and a bunch of other helper functions.<br>
+                    <code>import torch.nn.functional</code>: to access the <code>softmax()</code> function that we will use when calculating attention.<br><br>
+                
+                    Define <code>SelfAttention</code> that inherits from <code>nn.Module</code>, which is the base class for all neural network modules that you make with PyTorch.<br><br>
+                
+                    Create a <code>__init__()</code> method.
+                </p>
+                
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/trasnformer_4.png" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                    </div>
+                </div>
+
+                <h3> Self-attention vs Masked self-attention </h3>
+                
+
+                <p>
+                    <strong>Encoder-only transformer:</strong> Word embedding, positional encoding, self-attention, context-aware embeddings.<br><br>
+                
+                    <strong>Decoder-only transformer:</strong> Word embedding, positional encoding, masked self-attention, generative inputs (e.g., ChatGPT).<br><br>
+                
+                    Self-attention can look at words before and after the word of interest.<br><br>
+                
+                    Masked self-attention ignores the words that come after the word of interest.<br><br>
+                
+                    <strong>The matrix math for calculating masked self-attention</strong><br><br>
+                
+                    We add a new matrix, <code>M</code> for Mask, to the scaled similarities.<br><br>
+                
+                    (The purpose of the mask is to prevent tokens from including anything that comes after them when calculating attention.)
+                </p>
+
+                <div class="project-carousel">
+                    <div class="carousel-container">
+                        <img src="./asset/trasnformer_5.jpg" alt="Project 1 Image 1" class="carousel-img" id="project1-img" style="width: 400px; height: 250px;">
+                    </div>
+                </div>
+
+                <h3> coding masked self-attention in PyTorch </h3>
+                <p>
+                    The <code>forward()</code> method is where we actually calculate the masked self-attention values for each token.<br><br>
+                
+                    The <code>True</code> values correspond to attention values that we want to mask out.
+                </p>
+
+                
+                <h3> encoder-decoder attention(cross-attention </h3>
+                <p>
+                    It uses the output from the Encoder to calculate the keys and values.<br><br>
+                
+                    The first Transformer was based on something called a <strong>Seq2Seq</strong>, or an <strong>Encoder-Decoder</strong> model.
+                </p>
+                
+                <h3> multi-head attention</h3>
+                <p>
+                    It uses the output from the Encoder to calculate the keys and values.<br><br>
+                
+                    The first Transformer was based on something called a <strong>Seq2Seq</strong>, or an <strong>Encoder-Decoder</strong> model.
+                </p>
+
+                
+                <h3> coding encoder-decoder attention and multi-head attention in PyTorch</h3>
+
+                <pre><code class="language-python">
+                    import torch
+                    import torch.nn as nn
+                    
+                    # Define input parameters
+                    embed_dim = 64  # Dimension of input embeddings
+                    num_heads = 8   # Number of attention heads
+                    seq_len = 10    # Sequence length
+                    batch_size = 32 # Batch size
+                    
+                    # Create Multihead Attention layer
+                    mha = nn.MultiheadAttention(embed_dim=embed_dim, num_heads=num_heads, batch_first=True)
+                    
+                    # Random input tensor (batch_size, seq_len, embed_dim)
+                    query = torch.rand(batch_size, seq_len, embed_dim)
+                    key = torch.rand(batch_size, seq_len, embed_dim)
+                    value = torch.rand(batch_size, seq_len, embed_dim)
+                    
+                    # Apply multi-head attention
+                    output, attn_weights = mha(query, key, value)
+                    
+                    print(output.shape)       # Output: (batch_size, seq_len, embed_dim)
+                    print(attn_weights.shape) # Attention weights: (batch_size, num_heads, seq_len, seq_len)
+                </code></pre>
+                
+                <h3> Reference: </h3>
+                
+                <p>
+                    Deep learning from Professor Andrew Ng
+                </p>
+            </div>
         </div>
     </div>
 </body>
